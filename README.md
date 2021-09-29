@@ -1,19 +1,11 @@
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
-
-## Open-wc Starter App
+# Music Player
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## Quickstart
+A simple music player web application, inspired by some articles on dev.to.
 
-To get started:
-
-```sh
-npm init @open-wc
-# requires node 10 & npm 6 or higher
-```
+The main motivation for starting this small project was to try out some stuff and keep up to date with the most recent practices.
 
 ## Scripts
 
