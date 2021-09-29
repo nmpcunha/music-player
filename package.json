@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.15.6",
-    "@custom-elements-manifest/analyzer": "^0.4.17",
+    "@custom-elements-manifest/analyzer": "^0.5.4",
     "@open-wc/building-rollup": "^1.10.0",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "next",
@@ -31,19 +31,19 @@
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "@web/dev-server": "^0.1.24",
-    "@web/dev-server-storybook": "next",
+    "@web/dev-server-storybook": "^0.3.8",
     "@web/rollup-plugin-html": "^1.10.1",
     "@web/rollup-plugin-import-meta-assets": "^1.0.7",
-    "@web/test-runner": "next",
+    "@web/test-runner": "^0.13.18",
     "babel-plugin-template-html-minifier": "^4.1.0",
     "commitizen": "^4.2.4",
-    "concurrently": "^5.3.0",
+    "concurrently": "^6.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "deepmerge": "^4.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.57.0",
@@ -85,14 +85,12 @@
     "singleQuote": true,
     "arrowParens": "avoid"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.ts": [
+    "*.{js, ts}": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
       "prettier --write"
     ]
   },
