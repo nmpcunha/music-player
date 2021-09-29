@@ -34,6 +34,7 @@ export class MusicPlayer extends LitElement {
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
@@ -47,7 +48,7 @@ export class MusicPlayer extends LitElement {
     .app-footer a {
       margin-left: 5px;
     }
-  `;
+`;
 
   render() {
     return html`
