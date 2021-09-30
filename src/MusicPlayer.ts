@@ -4,7 +4,7 @@ import { property } from 'lit/decorators.js';
 const logo = new URL('../../assets/open-wc-logo.svg', import.meta.url).href;
 
 export class MusicPlayer extends LitElement {
-  @property({ type: String }) title = 'My app';
+  @property({ type: String }) title = 'Music Player';
 
   static styles = css`
     :host {
@@ -55,15 +55,14 @@ export class MusicPlayer extends LitElement {
       <main>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.title}</h1>
-
-        <p>Edit <code>src/MusicPlayer.ts</code> and save to reload.</p>
+        <p>🏗️ Application is still under development 🚧</p>
         <a
           class="app-link"
           href="https://open-wc.org/guides/developing-components/code-examples"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Code examples
+          Lit Element code examples
         </a>
       </main>
 
