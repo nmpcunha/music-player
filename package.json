@@ -4,6 +4,13 @@
   "license": "MIT",
   "author": "nmpcunha",
   "version": "0.0.0",
+  "bugs": {
+    "url": "https://github.com/nmpcunha/music-player/issues"
+  },
+  "homepage": "https://github.com/nmpcunha/music-player#readme",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "prepare": "husky install",
     "cz": "cz",
