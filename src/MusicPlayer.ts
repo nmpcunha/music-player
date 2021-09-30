@@ -48,7 +48,7 @@ export class MusicPlayer extends LitElement {
     .app-footer a {
       margin-left: 5px;
     }
-`;
+  `;
 
   render() {
     return html`
