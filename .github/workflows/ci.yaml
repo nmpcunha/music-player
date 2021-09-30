@@ -16,6 +16,9 @@ jobs:
       - name: Upgrade NPM
         run: npm install -g npm
 
+      - name: Install operating system dependencies
+        run: npx playwright install-deps
+
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
