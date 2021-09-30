@@ -29,5 +29,15 @@ jobs:
       - name: Linting
         run: npm run lint
         
-      - name: Run Unit Tests
+      - name: Unit Tests
         run: npm run test
+
+      - name: Integration Tests
+        run: npm run test:ci
+        
+      # Save videos and screenshots as test artifacts (https://github.com/actions/upload-artifact)
+      - uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: cypress/screenshots
+          if: failure() # Only upload screenshots if previous step has failed (i.e. if there are test failures)
