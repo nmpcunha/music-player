@@ -1,4 +1,4 @@
-name: QA Checks
+name: QA Checks 🛂
 
 on: [push, pull_request]
 
@@ -8,34 +8,40 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Setup Node.js environment
+      - name: 👨‍💻 Setup Node.js environment
         uses: actions/setup-node@v2
         with:
           node-version: 'lts/fermium'
 
-      - name: Upgrade NPM
+      - name: 🚚 Upgrade NPM
         run: npm install -g npm
 
-      - name: Install operating system dependencies
+      - name: 🤖 Install operating system dependencies
         run: npx playwright install-deps
 
-      - name: Cache dependencies
+      - name: 📦 Cache dependencies
         uses: actions/cache@v2
         with:
           path: ~/.npm
           key: npm-${{ hashFiles('package-lock.json') }}
           restore-keys: npm-
 
-      - name: Install Dependencies
+      - name: 💥 Install Dependencies
         run: npm ci
         
-      - name: Linting
+      - name: 🧹 Linting
         run: npm run lint
         
-      - name: Unit Tests
+      - name: 🕵️ Unit Tests
         run: npm run test
 
-      - name: Integration Tests
+      - name: 🔨 Build Project
+        run: npm run build
+
+      - name: 🖼️ Build Storybook
+        run: npm run storybook:build
+
+      - name: 🧪 Integration Tests
         run: npm run test:ci
         
       # Save videos and screenshots as test artifacts (https://github.com/actions/upload-artifact)
